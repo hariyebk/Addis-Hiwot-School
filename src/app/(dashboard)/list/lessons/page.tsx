@@ -37,7 +37,7 @@ export default function page(){
             <td className="hidden md:table-cell text-sm"> {item.teacher} </td>
             <td> 
                 <div className="flex items-center gap-2">
-                    <Link href={`/list/parents/${item.id}`}> 
+                    <Link href={`/list/lessons/${item.id}`}> 
                         <button className="w-7 h-7 flex items-center justify-center rounded-full bg-sky">
                             <Image src="/edit.png" alt="view" width={16} height={16} className="object-cover" />
                         </button>

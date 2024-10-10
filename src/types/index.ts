@@ -57,3 +57,11 @@ export type LESSON = {
     class: string,
     teacher: string,
 }
+
+export type EXAM = {
+    id: number,
+    subject: string,
+    class: string,
+    teacher: string,
+    date: string,
+}
