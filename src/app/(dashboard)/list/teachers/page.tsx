@@ -18,7 +18,7 @@ const columns = [
     {
         header: "Subjects", 
         accessor: "subjects",
-        className: "hidden md:table-cell"
+        className: "hidden md:table-cell pl-6"
     },
     {
         header: "Classes", 
@@ -45,7 +45,7 @@ export default function page(){
 
     const renderRow = (item: TEACHER): ReactNode => (
         <tr key={item.id} className="border-b border-gray-200 even:bg-slate-50 text-sm hover:bg-lightPurple">
-            <td className="flex items-center gap-4 max-sm:p-2 sm:p-4">
+            <td className="flex items-center gap-4 max-sm:p-2 sm:py-4 max-w-[175px]">
                 <Image src={item.photo} alt="avatar" width={40} height={40} className="object-cover w-10 h-10 rounded-full max-sm:hidden sm:block md:hidden xl:block" />
                 <div className="flex flex-col gap-1">
                     <h3 className="font-semibold"> {item.name} </h3>
@@ -53,7 +53,7 @@ export default function page(){
                 </div>
             </td>
             <td className="hidden md:table-cell text-sm"> {item.teacherId} </td>
-            <td className="hidden md:table-cell text-sm"> {item.subjects.join(", ")} </td>
+            <td className="hidden md:table-cell text-sm pl-6"> {item.subjects.join(", ")} </td>
             <td className="hidden md:table-cell text-sm"> {item.classes.join(", ")} </td>
             <td className="hidden lg:table-cell text-sm"> {item.phone ? item.phone : null} </td>
             <td className="hidden lg:table-cell text-sm"> {item.address} </td>

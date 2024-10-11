@@ -65,3 +65,31 @@ export type EXAM = {
     teacher: string,
     date: string,
 }
+
+export type ASSIGNMENT = {
+    id: 1,
+    subject: string,
+    class: string,
+    teacher: string,
+    dueDate: string,
+}
+
+export type RESULT = {
+    id: number,
+    subject: string,
+    class: string,
+    teacher: string,
+    student: string,
+    date: string,
+    type: string,
+    score: number,
+}
+
+export type EVENT = {
+    id: number,
+    title: string,
+    class: string,
+    date: string,
+    startTime: string,
+    endTime: string,
+}

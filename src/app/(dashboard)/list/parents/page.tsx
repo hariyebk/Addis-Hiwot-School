@@ -35,13 +35,13 @@ export default function page(){
 
     const renderRow = (item: PARENT): ReactNode => (
         <tr key={item.id} className="border-b border-gray-200 even:bg-slate-50 text-sm hover:bg-lightPurple">
-            <td className="max-sm:p-2 sm:p-4">
+            <td className="max-sm:p-2 sm:py-4 sm:px-2">
                 <div className="flex flex-col gap-1">
                     <h3 className="font-semibold"> {item.name} </h3>
                     <span className="text-xs text-gray-500"> {item.email ? item.email : null} </span>
                 </div>
             </td>
-            <td className="hidden md:table-cell text-sm"> {item.students.join(", ")} </td>
+            <td className="hidden md:table-cell text-sm max-w-[110px]"> {item.students.join(", ")} </td>
             <td className="hidden lg:table-cell text-sm"> {item.phone} </td>
             <td className="hidden lg:table-cell text-sm"> {item.address} </td>
             <td> 

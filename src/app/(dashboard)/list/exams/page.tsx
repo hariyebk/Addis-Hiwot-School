@@ -18,7 +18,7 @@ const columns = [
     {
         header: "Teacher", 
         accessor: "teacher",
-        className: "hidden md:table-cell"
+        className: "hidden md:table-cell pl-10"
     },
     {
         header: "Date", 
@@ -35,12 +35,12 @@ export default function page(){
 
     const renderRow = (item: EXAM): ReactNode => (
         <tr key={item.id} className="border-b border-gray-200 even:bg-slate-50 text-sm hover:bg-lightPurple">
-            <td className="max-sm:p-2 sm:p-4">
+            <td className="max-sm:p-2 sm:p-4 max-w-[90px]">
                 <h3 className="font-semibold"> {item.subject} </h3>
             </td>
             <td className="hidden md:table-cell text-sm"> {item.class} </td>
-            <td className="hidden md:table-cell text-sm"> {item.teacher} </td>
-            <td className="hidden md:table-cell text-sm"> {item.date} </td>
+            <td className="hidden md:table-cell text-sm pl-10"> {item.teacher} </td>
+            <td className="hidden lg:table-cell text-sm"> {item.date} </td>
             <td> 
                 <div className="flex items-center gap-2">
                     <Link href={`/list/exams/${item.id}`}> 
