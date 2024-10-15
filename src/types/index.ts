@@ -93,3 +93,10 @@ export type EVENT = {
     startTime: string,
     endTime: string,
 }
+
+export type ANNOUNCEMENT = {
+    id: number,
+    title: string,
+    class: string,
+    date: string,
+}
