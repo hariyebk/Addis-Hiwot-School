@@ -1,4 +1,4 @@
-import { Pagination, Table, TableSearch } from "@/components";
+import { FormModal, Pagination, Table, TableSearch } from "@/components";
 import { parentsData, role } from "@/lib/data";
 import { PARENT } from "@/types";
 import Image from "next/image";
@@ -43,17 +43,13 @@ export default function page(){
             </td>
             <td className="hidden md:table-cell text-sm max-w-[110px]"> {item.students.join(", ")} </td>
             <td className="hidden lg:table-cell text-sm"> {item.phone} </td>
-            <td className="hidden lg:table-cell text-sm"> {item.address} </td>
+        <td className="hidden lg:table-cell text-sm"> {item.address} </td>
             <td> 
                 <div className="flex items-center gap-2">
                     <Link href={`/list/parents/${item.id}`}> 
-                        <button className="w-7 h-7 flex items-center justify-center rounded-full bg-sky">
-                            <Image src="/edit.png" alt="view" width={16} height={16} className="object-cover" />
-                        </button>
+                        <FormModal table="parent" type="update" data={parentsData} />
                     </Link>
-                    {role === "admin" && <button className="w-7 h-7 flex items-center justify-center rounded-full bg-purple">
-                            <Image src="/delete.png" alt="trash-icon" width={16} height={16} className="object-cover" />
-                    </button>
+                    {role === "admin" &&  <FormModal table="parent" type="delete" id={item.id} />
                     }
                 </div>
             </td>
@@ -73,9 +69,7 @@ export default function page(){
                         <button className="w-8 h-8 flex items-center justify-center rounded-full bg-yellow"> 
                             <Image src="/sort.png" alt="sort-icon" width={14} height={14} className="object-cover" />
                         </button>
-                        {role === "admin" && <button className="w-8 h-8 flex items-center justify-center rounded-full bg-yellow"> 
-                            <Image src="/plus.png" alt="add-icon" width={14} height={14} className="object-cover" />
-                        </button>}
+                        {role === "admin" && <FormModal table="parent" type="create"/>}
                     </div>
                 </div>
             </div>

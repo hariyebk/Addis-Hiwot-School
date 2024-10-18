@@ -1,4 +1,4 @@
-import { Pagination, Table, TableSearch } from "@/components";
+import { FormModal, Pagination, Table, TableSearch } from "@/components";
 import { resultsData, role } from "@/lib/data";
 import { RESULT } from "@/types";
 import Image from "next/image";
@@ -56,13 +56,9 @@ export default function page(){
             <td> 
                 <div className="flex items-center gap-2">
                     <Link href={`/list/results/${item.id}`}> 
-                        <button className="w-7 h-7 flex items-center justify-center rounded-full bg-sky">
-                            <Image src="/edit.png" alt="view" width={16} height={16} className="object-cover" />
-                        </button>
+                        <FormModal table="result" type="update" data={resultsData} />
                     </Link>
-                    {role === "admin" && <button className="w-7 h-7 flex items-center justify-center rounded-full bg-purple">
-                        <Image src="/delete.png" alt="trash-icon" width={16} height={16} className="object-cover" />
-                    </button>
+                    {role === "admin" && <FormModal table="result" type="delete" id={item.id} />
                     }
                 </div>
             </td>
@@ -82,9 +78,7 @@ export default function page(){
                         <button className="w-8 h-8 flex items-center justify-center rounded-full bg-yellow"> 
                             <Image src="/sort.png" alt="sort-icon" width={14} height={14} className="object-cover" />
                         </button>
-                        {role === "admin" && <button className="w-8 h-8 flex items-center justify-center rounded-full bg-yellow"> 
-                            <Image src="/plus.png" alt="add-icon" width={14} height={14} className="object-cover" />
-                        </button>}
+                        {role === "admin" && <FormModal table="result" type="create" />}
                     </div>
                 </div>
             </div>

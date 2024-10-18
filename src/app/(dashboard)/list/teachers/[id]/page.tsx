@@ -18,7 +18,7 @@ export default function page({params: {id}} : Props){
                     {/* USER INFO CARD */}
                     <div className="bg-sky py-6 px-4 rounded-md flex-1 flex gap-4">
                         <div className="w-1/3 xl:w-1/2">
-                            <Image src="https://images.pexels.com/photos/2888150/pexels-photo-2888150.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="teacher profile photo" width={144} height={144} className="object-cover w-36 h-36 rounded-full" />
+                            <Image src="https://images.pexels.com/photos/842980/pexels-photo-842980.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="teacher profile photo" width={144} height={144} className="object-cover w-36 h-36 rounded-full" />
                         </div>
                         <div className="w-2/3 flex flex-col justify-between gap-4">
                             <h2 className="text-xl font-semibold"> Alex Hormozi </h2>

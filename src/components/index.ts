@@ -9,5 +9,6 @@ import TableSearch from "./TableSearch";
 import Pagination from "./Pagination";
 import Table from "./Table";
 import Performance from "./Performance";
+import FormModal from "./FormModal";
 
-export {Announcments, AttendanceChart, CountChart, EventCalendar, FinanceChart, UserCard, BigCalendar, TableSearch, Pagination, Table, Performance }
+export {Announcments, AttendanceChart, CountChart, EventCalendar, FinanceChart, UserCard, BigCalendar, TableSearch, Pagination, Table, Performance, FormModal }
