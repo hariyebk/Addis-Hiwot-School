@@ -2,7 +2,8 @@
 
 import Image from "next/image"
 import { useState } from "react"
-import TeacherForm from "./Forms/TeacherForm"
+import {TeacherForm, StudentForm, ParentForm, SubjectForm} from "@/components"
+
 
 interface Props {
     table: "teacher" | "student" | "parent" | "subject" | "class" | "lesson" | "exam" | "assignment" | "result" | "attendance" | "event" | "announcement",
@@ -10,6 +11,15 @@ interface Props {
     data?: any,
     id?: number
 }
+
+const forms: {
+    [key: string]: (type: 'create' | 'update', data?: any) => JSX.Element
+} = {
+    teacher: (type, data) => <TeacherForm type={type} data={data} />,
+    student: (type, data) => <StudentForm type={type} data={data} />,
+    parent: (type, data) => <ParentForm type={type} data={data} />,
+    subject: (type, data) => <SubjectForm type={type} data={data} />
+} 
 
 export default function FormModal({table, type, data, id}: Props) {
     const [open, setOpen] = useState<boolean>(false)
@@ -19,7 +29,7 @@ export default function FormModal({table, type, data, id}: Props) {
         return type === "delete" && id ? <form action="" className="p-4 flex flex-col gap-4"> 
             <span className="text-center font-medium"> All data will be lost. Are you sure you want to delete this {table} ? </span>
             <button className="bg-red-700 w-max self-center text-white py-2 px-4 rounded-md border-none focus-visible:outline-none"> Delete </button>
-        </form> : <TeacherForm type={type} data={data} />
+        </form> : type === "create" || type === "update" ? forms[table](type, data) : "Form not found"
     }
 
     return (

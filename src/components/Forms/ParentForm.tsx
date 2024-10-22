@@ -37,7 +37,7 @@ const schema = z.object({
     img: z.instanceof(File, {message: "Image is required"})
 });
 
-export default function TeacherForm({type, data} : Props){
+export default function ParentForm({type, data} : Props){
     const {register, handleSubmit, formState: {errors}} = useForm({
         resolver: zodResolver(schema)
     })
@@ -48,7 +48,7 @@ export default function TeacherForm({type, data} : Props){
 
     return (
         <form className="flex flex-col gap-6" onSubmit={onSubmit}>
-            <h1 className="text-xl font-semibold"> {type === "create" ? "Create a new Teacher" : "Update Teacher"} </h1>
+            <h1 className="text-xl font-semibold"> {type === "create" ? "Create a new Parent" : "Update Parent"} </h1>
             <span className="text-xs text-gray-400 font-medium">  Authentication Infromation </span>
             <div className="flex justify-between flex-wrap gap-4">
                 <InputField label="Username" register={register} name="username" defaultValue={data?.username} error={errors.username} />
