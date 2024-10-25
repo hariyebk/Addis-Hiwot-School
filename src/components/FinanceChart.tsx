@@ -98,7 +98,6 @@ export default function FinanceChart() {
             </ResponsiveContainer>
             {/* BOTTOM */}
             <div className="">
-
             </div>
         </section>  
     )
