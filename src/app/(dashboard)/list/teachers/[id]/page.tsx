@@ -18,27 +18,27 @@ export default function page({params: {id}} : Props){
                     {/* USER INFO CARD */}
                     <div className="bg-sky py-6 px-4 rounded-md flex-1 flex gap-4">
                         <div className="w-1/3 xl:w-1/2">
-                            <Image src="https://images.pexels.com/photos/842980/pexels-photo-842980.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="teacher profile photo" width={144} height={144} className="object-cover w-36 h-36 rounded-full" />
+                            <Image src="/man.png" alt="teacher profile photo" width={144} height={144} className="object-cover w-36 h-36 rounded-full" />
                         </div>
                         <div className="w-2/3 flex flex-col justify-between gap-4">
                             <div className="flex items-center gap-4">
-                                <h2 className="text-xl font-semibold"> Alex Hormozi </h2>
+                                <h2 className="text-xl font-semibold"> Abebe kassa </h2>
                                 <FormModal table="teacher" type="update" data={
                                     {
                                         id: 1,
                                         teacherId: "1234567890",
-                                        username: "alexHormozi",
+                                        username: "abebe_kassa",
                                         password: "password",
-                                        firstName: "Alex",
-                                        lastName: "Hormozi",
-                                        email: "john@doe.com",
+                                        firstName: "Abebe",
+                                        lastName: "Kassa",
+                                        email: "abebe@kassa.com",
                                         bloodType: "A+",
-                                        photo: "https://images.pexels.com/photos/2888150/pexels-photo-2888150.jpeg?auto=compress&cs=tinysrgb&w=1200",
-                                        phone: "1234567890",
+                                        photo: "/man.png",
+                                        phone: "+25142237570",
                                         subjects: ["Math", "Geometry"],
                                         birthdate: "2000-07-12",
-                                        classes: ["1B", "2A", "3C"],
-                                        address: "123 Main St, Anytown, USA",
+                                        classes:  ["8B", "10A"],
+                                        address: "ayat, Addis Ababa, Ethiopia",
                                     }
                                 } />
                             </div>
@@ -50,11 +50,11 @@ export default function page({params: {id}} : Props){
                                 </div>
                                 <div className="w-full md:w-1/3 lg:w-full 2xl:w-1/3 flex items-center gap-2">
                                     <Image src="/date.png" alt="date-icon" width={14} height={14} className="object-cover" />
-                                    <span> January 2025 </span>
+                                    <span> October 20218 </span>
                                 </div>
                                 <div className="w-full md:w-1/3 lg:w-full 2xl:w-1/3 flex items-center gap-2">
                                     <Image src="/mail.png" alt="mail-icon" width={14} height={14} className="object-cover" />
-                                    <span> user@gmail.com </span>
+                                    <span> abebe@kassa.com </span>
                                 </div>
                                 <div className="w-full md:w-1/3 lg:w-full 2xl:w-1/3 flex items-center gap-2">
                                     <Image src="/phone.png" alt="phone-icon" width={14} height={14} className="object-cover" />

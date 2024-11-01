@@ -36,7 +36,7 @@ export default function page(){
             <td className="hidden md:table-cell text-sm"> {item.class} </td>
             <td className="hidden md:table-cell text-sm pl-10"> {item.teacher} </td>
             <td> 
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-3">
                     <Link href={`/list/lessons/${item.id}`}> 
                         <FormModal table="lesson" type="update" data={lessonsData} />
                     </Link>

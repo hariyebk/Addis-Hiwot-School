@@ -19,27 +19,25 @@ export default function page({params: {id}} : Props){
                 {/* USER INFO CARD */}
                 <div className="bg-sky py-6 px-4 rounded-md flex-1 flex gap-4">
                     <div className="w-1/3 xl:w-1/2">
-                        <Image src="https://images.pexels.com/photos/1102341/pexels-photo-1102341.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="student profile photo" width={144} height={144} className="object-cover w-36 h-36 rounded-full" />
+                        <Image src="/graduate.png" alt="student profile photo" width={144} height={144} className="object-cover w-36 h-36 rounded-full" />
                     </div>
                     <div className="w-2/3 flex flex-col justify-between gap-4">
                         <div className="flex items-center gap-4">
-                            <h2 className="text-xl font-semibold"> Sara Eskinder </h2>
+                            <h2 className="text-xl font-semibold"> Abel Beyene </h2>
                             <FormModal table="student" type="update" data={
                                 {
                                     id: 1,
                                     teacherId: "1234567890",
-                                    username: "saracris",
+                                    username: "abel_beyene",
                                     password: "password",
-                                    firstName: "Sara",
-                                    lastName: "Cris",
-                                    email: "sara@cris.com",
+                                    firstName: "Abel",
+                                    lastName: "Beyene",
+                                    email: "abel@beyene.com",
                                     bloodType: "A+",
-                                    photo: "https://images.pexels.com/photos/2888150/pexels-photo-2888150.jpeg?auto=compress&cs=tinysrgb&w=1200",
+                                    photo: "/graduate.png",
                                     phone: "1234567890",
-                                    subjects: ["Math", "Geometry"],
                                     birthdate: "2000-07-12",
-                                    classes: ["1B", "2A", "3C"],
-                                    address: "123 Main St, Anytown, USA",
+                                    address: "bole, Addis Ababa, Ethiopia",
                                 }
                             } />
                         </div>
@@ -51,11 +49,11 @@ export default function page({params: {id}} : Props){
                             </div>
                             <div className="w-full md:w-1/3 lg:w-full 2xl:w-1/3 flex items-center gap-2">
                                 <Image src="/date.png" alt="date-icon" width={14} height={14} className="object-cover" />
-                                <span> January 2025 </span>
+                                <span> January 2020 </span>
                             </div>
                             <div className="w-full md:w-1/3 lg:w-full 2xl:w-1/3 flex items-center gap-2">
                                 <Image src="/mail.png" alt="mail-icon" width={14} height={14} className="object-cover" />
-                                <span> user@gmail.com </span>
+                                <span> abel@beyene.com </span>
                             </div>
                             <div className="w-full md:w-1/3 lg:w-full 2xl:w-1/3 flex items-center gap-2">
                                 <Image src="/phone.png" alt="phone-icon" width={14} height={14} className="object-cover" />

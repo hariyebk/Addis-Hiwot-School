@@ -41,14 +41,14 @@ export default function page(){
                     <span className="text-xs text-gray-500"> {item.email ? item.email : null} </span>
                 </div>
             </td>
-            <td className="hidden md:table-cell text-sm max-w-[110px]"> {item.students.join(", ")} </td>
+            <td className="hidden md:table-cell text-sm max-w-[110px] flex-wrap"> {item.students.join(", ")} </td>
             <td className="hidden lg:table-cell text-sm"> {item.phone} </td>
         <td className="hidden lg:table-cell text-sm"> {item.address} </td>
             <td> 
                 <div className="flex items-center gap-2">
-                    <Link href={`/list/parents/${item.id}`}> 
+                    <div> 
                         <FormModal table="parent" type="update" data={parentsData} />
-                    </Link>
+                    </div>
                     {role === "admin" &&  <FormModal table="parent" type="delete" id={item.id} />
                     }
                 </div>
